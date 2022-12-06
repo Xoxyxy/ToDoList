@@ -1,0 +1,272 @@
+:root {
+  --light-color: rgba(254, 237, 225, 0.8);
+  --primary-color: rgba(242, 85, 81, 1);
+  --dark-900: #241722;
+  --dark-800: #352432;
+  --dark-700: rgba(99, 35, 41, 0.6);
+  --border-color: rgba(84, 53, 62, 0.8);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: calc(100vw / 1440 * 10);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.body {
+  margin: 0;
+  min-width: 3.2rem;
+  min-height: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--dark-900);
+}
+
+.body--fixed {
+  overflow: hidden;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+input:focus {
+  outline: var(--dark-700) solid .1rem;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 7.5rem 1.5rem 2rem 1.5rem;
+  max-width: 121.4rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+}
+
+.modal--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__window {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15rem 10rem 15rem 14rem;
+  background-color: var(--dark-900);
+  border-radius: 2rem;
+}
+
+.modal__close {
+  position: absolute;
+  top: 2.5rem;
+  right: 3rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.input {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: var(--light-color);
+  background: var(--dark-800);
+  border-radius: 4rem;
+  width: 35rem;
+  height: 2rem;
+  padding: 1.7rem;
+  margin-right: 1.5rem;
+}
+
+.todo__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.1rem;
+  margin-bottom: 5rem;
+  border-bottom: .2rem solid var(--border-color);
+}
+
+.todo__title {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  color: var(--light-color);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.todo__task-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: var(--primary-color);
+  background: var(--dark-800);
+  border-radius: 4rem;
+  padding: 1.5rem 3.5rem;
+  transition: .3s ease-in-out;
+}
+
+.todo__task-btn:hover {
+  background-color: var(--dark-700);
+}
+
+.todo__add-img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.todo__big-title {
+  display: block;
+  font-weight: 700;
+  font-size: 12.8rem;
+  line-height: 19.2rem;
+  color: var(--light-color);
+  text-align: center;
+  margin-top: 20vh;
+}
+
+.hide {
+  display: none;
+}
+
+.todo__item {
+  position: relative;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--light-color);
+  padding: 1.8rem 3.2rem;
+  background-color: var(--dark-800);
+  border-radius: .5rem;
+  margin-bottom: 2.5rem;
+}
+
+.todo__item:last-child {
+  margin-bottom: 0;
+}
+
+.todo__item--through {
+  text-decoration: line-through;
+  background-color: var(--dark-700);
+  opacity: .7;
+}
+
+.todo__btns {
+  position: absolute;
+  right: 3.2rem;
+  top: 1.9rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.todo__do-img {
+  width: 2rem;
+  height: 2rem;
+  pointer-events: none;
+}
+
+.todo__delete-img {
+  width: 2.4rem;
+  height: 2.4rem;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: calc(100vw / 768 * 10);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: calc(100vw / 576 * 10);
+  }
+
+  .todo__top {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .modal__window {
+    padding: 15rem 8rem 15rem 12rem;
+  }
+
+  .input {
+    width: 28rem;
+  }
+
+  .todo__big-title {
+    font-size: 8.8rem;
+    line-height: 14.2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: calc(100vw / 360 * 10);
+  }
+
+  .modal__window {
+    padding: 13rem 2rem 13rem 4rem;
+  }
+
+  .input {
+    width: 20rem;
+  }
+
+  .todo__big-title {
+    font-size: 5.8rem;
+    line-height: 8.2rem;
+  }
+}

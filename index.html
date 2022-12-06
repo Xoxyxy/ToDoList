@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/vendro.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body class="body">
+  <div class="todo container">
+    <div class="modal">
+      <form class="modal__window">
+        <a class="btn-reset modal__close">
+          <img src="./img/close-btn.svg" class="todo__add-img" loading="lazy" width="20" height="20"
+            alt="Закрыть окно"></a>
+        <input type="text" class="input-reset input" name="input" required placeholder="Название задачи"
+          inputmode="text">
+        <button type="submit" class="btn-reset modal__submit">
+          <img src="./img/add.svg" class="todo__add-img" loading="lazy" width="24" height="24" alt="Добавить задачу">
+        </button>
+      </form>
+    </div>
+    <div class="todo__top">
+      <h1 class="todo__title">To Do | Твой список дел</h1>
+      <button class="btn-reset todo__task-btn">
+        <img src="./img/plus.svg" class="todo__add-img" loading="lazy" width="24" height="24" alt="Добавить задачу">
+        <span>Добавить задачу</span>
+      </button>
+    </div>
+    <div class="todo__body">
+      <ul class="list-reset todo__list">
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
