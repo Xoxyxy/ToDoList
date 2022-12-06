@@ -89,11 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function checkEmptyList() {
     if (tasks.length < 1) {
-      const title = `<li class="todo__big-title">TO-DO LIST</li>`
-      list.insertAdjacentHTML('afterbegin', title)
+      const empty = `<li class="todo__empty">СПИСОК ПУСТ</li>`
+      list.insertAdjacentHTML('afterbegin', empty)
     } else {
-      const titleEl = document.querySelector('.todo__big-title')
-      titleEl ? titleEl.remove() : null
+      const emptyEl = document.querySelector('.todo__empty')
+      emptyEl ? emptyEl.remove() : null
     }
   }
 

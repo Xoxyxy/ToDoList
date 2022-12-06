@@ -1,1 +1,1 @@
-# Учебный проект JS, To-Do List.git init
+# Учебный проект JS, To-Do

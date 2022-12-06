@@ -165,7 +165,7 @@ input:focus {
   height: 2.4rem;
 }
 
-.todo__big-title {
+.todo__empty {
   display: block;
   font-weight: 700;
   font-size: 12.8rem;
@@ -226,6 +226,11 @@ input:focus {
   html {
     font-size: calc(100vw / 768 * 10);
   }
+
+  .todo__empty {
+    font-size: 8.8rem;
+    line-height: 14.2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -246,9 +251,9 @@ input:focus {
     width: 28rem;
   }
 
-  .todo__big-title {
-    font-size: 8.8rem;
-    line-height: 14.2rem;
+  .todo__empty {
+    font-size: 7.5rem;
+    line-height: 10rem;
   }
 }
 
@@ -265,8 +270,8 @@ input:focus {
     width: 20rem;
   }
 
-  .todo__big-title {
-    font-size: 5.8rem;
-    line-height: 8.2rem;
+  .todo__empty {
+    font-size: 4.6rem;
+    line-height: 8rem;
   }
 }
