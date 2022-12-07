@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <button class="btn-reset todo__do"><img src="./img/do-img.svg" class="todo__do-img" loading="lazy"
             width="20" height="20" alt="Задание выполнено"></button>
           <button class="btn-reset todo__delete"><img src="./img/rubbish.svg" class="todo__delete-img" loading="lazy"
-            width="24" height="24" alt="Пустой квадрат"></button>
+            width="24" height="24" alt="Мусорка"></button>
       </div>
       </li>
       `
