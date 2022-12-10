@@ -180,12 +180,13 @@ input:focus {
 }
 
 .todo__item {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: var(--light-color);
-  padding: 1.8rem 3.2rem;
+  padding: 1.8rem 3.2rem 1.4rem;
   background-color: var(--dark-800);
   border-radius: .5rem;
   margin-bottom: 2.5rem;
@@ -202,9 +203,6 @@ input:focus {
 }
 
 .todo__btns {
-  position: absolute;
-  right: 3.2rem;
-  top: 1.9rem;
   display: flex;
   align-items: center;
   gap: 1.5rem;

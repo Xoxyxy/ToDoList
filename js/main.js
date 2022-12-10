@@ -45,7 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const addTask = event => {
     event.preventDefault()
 
-    const inputText = input.value
+    const inputText = input.value.trim()
+
+    if (inputText == '') return
 
     const newTask = {
       id: Date.now(),
@@ -101,11 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const cssClass = task.done ? 'todo__item todo__item--through ' : 'todo__item'
     const taskHTML = `
       <li id="${task.id}" class="${cssClass}">
-      ${task.text}
+      <div class="todo__text">${task.text}</div>
       <div class="todo__btns">
-          <button class="btn-reset todo__do"><img src="./img/do-img.svg" class="todo__do-img" loading="lazy"
+        <button class="btn-reset todo__do"><img src="./img/do-img.svg" class="todo__do-img" loading="lazy"
             width="20" height="20" alt="Задание выполнено"></button>
-          <button class="btn-reset todo__delete"><img src="./img/rubbish.svg" class="todo__delete-img" loading="lazy"
+        <button class="btn-reset todo__delete"><img src="./img/rubbish.svg" class="todo__delete-img" loading="lazy"
             width="24" height="24" alt="Мусорка"></button>
       </div>
       </li>
@@ -117,7 +119,3 @@ document.addEventListener('DOMContentLoaded', () => {
   list.addEventListener('click', deleteTask)
   list.addEventListener('click', doneTask)
 })
-
-
-
-
