@@ -202,6 +202,10 @@ input:focus {
   opacity: .7;
 }
 
+.todo__text {
+  max-width: 40rem;
+}
+
 .todo__btns {
   display: flex;
   align-items: center;
